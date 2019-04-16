@@ -1,0 +1,56 @@
+//选择列的样式
+.selectRow {
+  background: #e6f7ff;
+}
+
+//编辑列的样式
+.cellEdit {
+  padding: 0 0 !important;
+  min-width: 45px;
+}
+
+//编辑列表格拖动的样式
+.drop-over-downward {
+  td {
+    border-bottom: 2px dashed #1890ff !important;
+  }
+}
+
+//编辑列表格拖动的样式
+.drop-over-upward {
+  td {
+    border-top: 2px dashed #1890ff;
+  }
+}
+
+//合计表格样式
+.totalTable {
+  border-left: 0 !important;
+}
+
+:global {
+  .ant-table-small .ant-table-content .ant-table-body {
+
+    margin: 0 0;
+
+    thead tr th {
+      background: #e3e9ef !important;
+      border-right: 1px solid #cad1d8 !important;
+      color: rgb(0, 0, 0);
+    }
+  }
+
+  //拖动大小的样式
+  .react-resizable {
+    position: relative;
+  }
+
+  .react-resizable-handle {
+    position: absolute;
+    width: 10px;
+    height: 100%;
+    bottom: 0;
+    right: -5px;
+    cursor: col-resize;
+  }
+}

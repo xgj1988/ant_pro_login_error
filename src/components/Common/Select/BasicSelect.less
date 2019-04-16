@@ -1,0 +1,21 @@
+.prefix {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 10px;
+}
+
+.BasicSelect{
+  position: relative;
+  box-sizing: border-box;
+  display: inline-block;
+  &:hover {
+    .suffix {
+      color: #3f7ebe;
+    }
+    .prefix {
+      color: #3f7ebe;
+    }
+  }
+}

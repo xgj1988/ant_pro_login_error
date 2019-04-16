@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.wrap {
+  margin: 10px auto;
+  position: relative;
+  clear: both;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.wrap .content1 {
+  display: inline-block;
+  overflow: hidden;
+  text-align: left;
+}
+
+.wrap .content2 {
+  display: inline-block;
+  overflow: hidden;
+  text-align: center;
+}
+
+.wrap .line {
+  &:hover {
+    .lineThumb .v {
+      background-color: grey;
+    }
+    background-color: #f9f9f9;
+  }
+  display: inline-block;
+  position: absolute;
+  cursor: col-resize;
+  background: #fff;
+  overflow: hidden;
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.treeFild {
+  &:hover {
+    background-color: #ffedd5;
+  }
+}
+
+.lineThumb {
+  left: 35%;
+  top: 40%;
+  position: absolute;
+  height: 384px;
+}
+
+.lineThumb .v {
+  height: 40px;
+  width: 2px;
+  left: 4px;
+  background-color: #d1d1d1;
+}
+
+.treeToolbar {
+  .dockbody {
+    height: 36px;
+    line-height: 36px;
+    padding-left: 0.5em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: table-cell;
+    width: 1000px;
+  }
+  div:not(:first-child) {
+    &:hover {
+      background-color: #ffedd5;
+    }
+    vertical-align: middle;
+    display: table-cell;
+    padding: 7px 12px 7px 12px;
+    cursor: pointer;
+  }
+  background-color: #f1f1f1;
+  border-bottom: 1px solid #e7e7e7;
+}
+
