@@ -10,6 +10,10 @@ export default [
     ]
   },
   {
+    path: "/footerbarerror",
+    component: "./System/Error/FooterBarError",
+  },
+  {
     path: "/login",
     component: "../layouts/UserLayout",
     routes: [
