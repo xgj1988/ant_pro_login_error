@@ -268,18 +268,18 @@ export default class ProductModal extends PureComponent {
             <Form.Item {...tailFormItemLayout}>
               <Button type="primary" htmlType="submit" >Register</Button >
             </Form.Item >
+            <BackTop />
           </Card >
-          <FooterToolbar >
-            <div style={{
-              margin: "0 auto",
-              width: 800
-            }}
-            >
-              <Button type="primary" onClick={this.handleSubmit} >保存</Button >
-            </div >
-          </FooterToolbar >
-          <BackTop />
         </Form >
+        <FooterToolbar >
+          <div style={{
+            margin: "0 auto",
+            width: 800
+          }}
+          >
+            <Button type="primary" onClick={this.handleSubmit} >保存</Button >
+          </div >
+        </FooterToolbar >
       </Fragment >
     );
   }
