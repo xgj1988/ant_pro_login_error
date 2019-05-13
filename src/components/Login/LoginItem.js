@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button, Col, Form, Input, Row } from 'antd';
+import { Form, Input, Button, Row, Col } from 'antd';
 import omit from 'omit.js';
 import styles from './index.less';
 import ItemMap from './map';
@@ -9,7 +9,8 @@ const FormItem = Form.Item;
 
 class WrapFormItem extends Component {
   static defaultProps = {
-    buttonText: '获取验证码',
+    getCaptchaButtonText: 'captcha',
+    getCaptchaSecondText: 'second',
   };
 
   constructor(props) {
@@ -83,7 +84,8 @@ class WrapFormItem extends Component {
       defaultValue,
       rules,
       name,
-      buttonText,
+      getCaptchaButtonText,
+      getCaptchaSecondText,
       updateActive,
       type,
       ...restProps
@@ -108,7 +110,7 @@ class WrapFormItem extends Component {
                 size="large"
                 onClick={this.onGetCaptcha}
               >
-                {count ? `${count} s` : buttonText}
+                {count ? `${count} ${getCaptchaSecondText}` : getCaptchaButtonText}
               </Button>
             </Col>
           </Row>
@@ -131,8 +133,8 @@ Object.keys(ItemMap).forEach(key => {
       {context => (
         <WrapFormItem
           customprops={item.props}
-          {...props}
           rules={item.rules}
+          {...props}
           type={key}
           updateActive={context.updateActive}
           form={context.form}

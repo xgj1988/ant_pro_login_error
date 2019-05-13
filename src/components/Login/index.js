@@ -56,7 +56,9 @@ class Login extends Component {
           });
         },
       },
-      form,
+      form: {
+        ...form,
+      },
       updateActive: activeItem => {
         const { type, active } = this.state;
         if (active[type]) {
@@ -114,7 +116,7 @@ class Login extends Component {
                 {otherChildren}
               </React.Fragment>
             ) : (
-              [...children]
+              children
             )}
           </Form>
         </div>
